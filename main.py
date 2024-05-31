@@ -2,9 +2,6 @@ from flask import Flask, request, jsonify
 import requests
 app = Flask(__name__)
 
-# a Flask application that converts a user's value in USD to the 
-# equivalent value in a specified target currency using real-time 
-# exchange rate data fetched from the ExchangeRate-API
 @app.route("/convert-currency/<price>/<target_currency>", methods=["GET"])
 def get_currency_converter(price, target_currency):
     api_key = "6f2f5d412ca45f64b9d2f641"
